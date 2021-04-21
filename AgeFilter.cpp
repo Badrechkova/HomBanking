@@ -42,9 +42,8 @@ int main (){
                     double age = stod(line.substr(16, 19));
                     if (Enc_RSA(a - 1) < Enc_RSA(age) and Enc_RSA(age) < Enc_RSA(b + 1))
                     {
-                        encResults << fmod(Enc_RSA(age),n) << endl;
+                        encResults << Enc_RSA(age) << endl;
 			results << Dec_RSA(Enc_RSA(age)) << endl;
-                        
                     }
 
                 }
