@@ -116,12 +116,10 @@ double Dec_RSA(double cipher) {                                                 
 }                                                                                  //|
 //------------------FOR EVOOQ'S CLOUD AND THE BANK-----------------------------------|
 
-//----------------------FOR EVOOQ'S CLOUD--------------------------------------------|
-bool compareRSA(double l, double k) {                                              //|        
-    if (Enc_RSA(l) < Enc_RSA(k))                                                   //| 
-    {                                                                              //|     
-        return 1;                                                                  //| 
-    }                                                                              //| 
-    else return 0;                                                                 //|     
-}                                                                                  //| 
-//----------------------FOR EVOOQ'S CLOUD--------------------------------------------|
+//----------------------FOR EVOOQ'S CLOUD---------------------------------------------|
+double Enc_RSA_Cloud(double l, double exposant_cloud) {                             //|
+    double val;                                                                     //|        
+    val = Enc_RSA(l, exposant_cloud);                                               //| 
+    return val;                                                                     //|     
+}                                                                                   //| 
+//----------------------FOR EVOOQ'S CLOUD---------------------------------------------|
