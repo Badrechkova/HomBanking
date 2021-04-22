@@ -42,9 +42,9 @@ double big_prime(double big_num) {                                              
     double y;                                                                                                             //|    
     if (isPrime(big_num) == true)                                                                                         //|    
     {                                                                                                                     //|            
-        y = big_num;                                                                                                      //|    
-        return  y;                                                                                                        //|    
-    }                                                                                                                     //|    
+        y = big_num;                                                                                                      //|                                                                                                        //|    
+    }                                                                                                                     //|  
+    return y;                                                                                                             //|    
 }                                                                                                                         //|                
                                                                                                                           //|    
 //------------------------Variables--------------------                                                                   //|                
@@ -121,6 +121,7 @@ bool compareRSA(double l, double k) {                                           
     if (Enc_RSA(l) < Enc_RSA(k))                                                   //| 
     {                                                                              //|     
         return 1;                                                                  //| 
-    }                                                                              //|     
+    }                                                                              //| 
+    else return 0;                                                                 //|     
 }                                                                                  //| 
 //----------------------FOR EVOOQ'S CLOUD--------------------------------------------|
