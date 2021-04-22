@@ -12,7 +12,7 @@ using namespace std;
 int main (){
 
     string ans;
-    double a, b;
+    double a, b,exp_cloud(20);
     
     do
     {
@@ -23,7 +23,7 @@ int main (){
             cout << "Enter the maximum age: ";
             cin >> b;
             cout << endl;
-           
+
             if (a > b or a*b<=0 or (a<0 and b<0)) { cout << "Enter a valid interval." << endl; }
             else
             {
@@ -40,11 +40,13 @@ int main (){
                 while (getline(data, line))
                 {
                     double age = stod(line.substr(16, 19));
-                    if (Enc_RSA(a - 1) < Enc_RSA(age) and Enc_RSA(age) < Enc_RSA(b + 1))
+                    if (Enc_RSA_Cloud(a - 1, 17) < Enc_RSA(age, e) and Enc_RSA(age, e) < Enc_RSA_Cloud(b + 1, 17))
                     {
-                        results << age << endl;
-                        encResults << Enc_RSA(age) << endl;
+                        encResults << Enc_RSA(age, e) << endl;
+                        results << Dec_RSA(Enc_RSA(age, e)) << endl;
+                        
                     }
+
 
                 }
                 data.close();
@@ -75,8 +77,13 @@ int main (){
                 }
                 results.close();
             }
-            else cout << "Unable to open file";
-
+            else cout << "Unable to open file";            
+            
+            //-------------------------------------------
+            cout << "This is the SK (e,p,q,d)=(" << e << ", " << p << ", " << q << ", " << d << ")" << endl;
+            cout << "This is the PK for the CLOUD (e,n)=(" << exp_cloud << ", " << n << ")" << endl;
+            //-------------------------------------------
+            
             //-------------------------------------------
             cout << "Try again ? (y/n): ";
             cin >> ans;
