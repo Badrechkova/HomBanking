@@ -104,7 +104,7 @@ double Enc_RSA(double age) {                                                    
 //----------------------FOR EVOOQ'S CLOUD--------------------------------------------|
 
 
-//----------------------FOR THE BANK ------------------------------------------------|
+//------------------FOR EVOOQ'S CLOUD AND THE BANK-----------------------------------|
 //Decryption function--------------------------------------                          |   
 double Dec_RSA(double cipher) {                                                    //|
     double decryptCipher;                                                          //|
@@ -114,7 +114,7 @@ double Dec_RSA(double cipher) {                                                 
     // std::cout << "decrypted message modulo n: " << decryptCipher << std::endl;  //|
     return decryptCipher;                                                          //|
 }                                                                                  //|
-//----------------------FOR THE BANK ------------------------------------------------|
+//------------------FOR EVOOQ'S CLOUD AND THE BANK-----------------------------------|
 
 //----------------------FOR EVOOQ'S CLOUD--------------------------------------------|
 bool compareRSA(double l, double k) {                                              //|        
